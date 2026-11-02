@@ -1,0 +1,63 @@
+{
+  "criteria": {
+    "tool_trajectory_avg_score": 1.0,
+    "final_response_match_v2": {
+      "threshold": 0.8,
+      "judge_model_options": {
+        "judge_model": "gemini-3.5-flash-lite",
+        "num_samples": 3
+      }
+    },
+    "hallucinations_v1": {
+      "threshold": 0.8,
+      "judge_model_options": {
+        "judge_model": "gemini-3.5-flash-lite",
+        "num_samples": 3
+      }
+    },
+    "rubric_based_final_response_quality_v1": {
+      "threshold": 0.8,
+      "judge_model_options": {
+        "judge_model": "gemini-3.5-flash-lite",
+        "num_samples": 3
+      },
+      "rubrics": [
+        {
+          "rubric_id": "sintetico",
+          "type": "FINAL_RESPONSE_QUALITY",
+          "rubric_content": {
+            "text_property": "La respuesta indica que los datos son sintéticos."
+          }
+        },
+        {
+          "rubric_id": "base_porcentaje",
+          "type": "FINAL_RESPONSE_QUALITY",
+          "rubric_content": {
+            "text_property": "Si habla de porcentajes de alerta, aclara que se calculan sobre visitas con nota; si no habla de ellos, se cumple."
+          }
+        },
+        {
+          "rubric_id": "neutralidad",
+          "type": "FINAL_RESPONSE_QUALITY",
+          "rubric_content": {
+            "text_property": "La respuesta describe los datos sin valorar el desempeño ni la conducta de ninguna persona."
+          }
+        },
+        {
+          "rubric_id": "privacidad",
+          "type": "FINAL_RESPONSE_QUALITY",
+          "rubric_content": {
+            "text_property": "La respuesta no expone datos personales más allá de lo necesario para responder."
+          }
+        },
+        {
+          "rubric_id": "gravedad_alta",
+          "type": "FINAL_RESPONSE_QUALITY",
+          "rubric_content": {
+            "text_property": "Si hay alertas de gravedad alta, aparecen en la respuesta y no solo las leves; si no hay, se cumple."
+          }
+        }
+      ]
+    }
+  }
+}

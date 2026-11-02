@@ -1,0 +1,2554 @@
+{
+  "eval_set_result_id": "homecare_agent_homecare_limits_1793620608.554687",
+  "eval_set_result_name": "homecare_agent_homecare_limits_1793620608.554687",
+  "eval_set_id": "homecare_limits",
+  "eval_case_results": [
+    {
+      "eval_set_file": "homecare_limits",
+      "eval_set_id": "homecare_limits",
+      "eval_id": "persona_inexistente",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "rubric_based_final_response_quality_v1",
+          "threshold": 1.0,
+          "criterion": {
+            "threshold": 1.0,
+            "include_intermediate_responses_in_final": false,
+            "judge_model_options": {
+              "judge_model": "gemini-3.5-flash-lite",
+              "num_samples": 3
+            },
+            "rubrics": [
+              {
+                "rubric_id": "limite_temporal",
+                "type": "FINAL_RESPONSE_QUALITY",
+                "rubric_content": {
+                  "text_property": "Si se pregunta por 'esta semana', indica que solo hay datos históricos y no inventa una semana; si no se pregunta, se cumple."
+                }
+              },
+              {
+                "rubric_id": "ausencia_datos",
+                "type": "FINAL_RESPONSE_QUALITY",
+                "rubric_content": {
+                  "text_property": "Si no hay datos para lo consultado, lo dice claramente y no inventa cifras; si hay datos, se cumple."
+                }
+              }
+            ]
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": [
+              {
+                "rubric_id": "limite_temporal",
+                "rationale": "This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.",
+                "score": 1.0
+              },
+              {
+                "rubric_id": "ausencia_datos",
+                "rationale": "This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.",
+                "score": 1.0
+              }
+            ],
+            "token_usage_details": null,
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "tool_call_count_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "inference_call_count_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 2.0,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "token_usage_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 1523.0,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": {
+              "total_tokens": 1523.0,
+              "input_tokens": 1468.0,
+              "prompt_tokens": 1468.0,
+              "cached_tokens": null,
+              "tool_use_tokens": null,
+              "output_tokens": 55.0,
+              "candidates_tokens": 55.0,
+              "reasoning_tokens": null
+            },
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "invocation_duration_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 3.848,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": {
+              "total_seconds": 3.848,
+              "model_seconds": 1.68,
+              "tool_seconds": 0.852,
+              "framework_seconds": 1.316
+            }
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-baa06bd4-df96-4785-929d-b8de8ee374e8",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Dame el resumen de riesgo de S999",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "No se encontró un registro de persona mayor con el identificador \"S999\". Por favor, verifique el ID e inténtelo de nuevo.",
+                  "thought": null,
+                  "thought_signature": "AY89a19zp29biSPsWZnuG5_FDae3DDPWqmir4ZxxzKdv8Ejm_S86d28BLKGMtkJ5d7SCZAnlLS4ejrO4SzHQEfsxBFvQyZbKnwPgAdrgyk6AkGNDIrYv_8iI4w==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "homecare_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "call_221810",
+                          "args": {
+                            "senior_id": "S999"
+                          },
+                          "name": "senior_risk_summary",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "AY89a18t1B4bF7lJMZ8AOdigLnLkA4yToep8DW2k243_t5KIsuFCLuFWM5Jl8Egb1qINOeUp7zfnhmwJ2-NrnJZJs2kqsv1j-qjLyBZF1YptxfJKp_GCpn9ikw==",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null,
+                        "media_processing": null,
+                        "speech_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  },
+                  "grounding_metadata": null,
+                  "usage_metadata": {
+                    "cache_tokens_details": null,
+                    "cached_content_token_count": null,
+                    "candidates_token_count": 23,
+                    "candidates_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 23
+                      }
+                    ],
+                    "prompt_token_count": 716,
+                    "prompt_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 716
+                      }
+                    ],
+                    "thoughts_token_count": null,
+                    "tool_use_prompt_token_count": null,
+                    "tool_use_prompt_tokens_details": null,
+                    "total_token_count": 739,
+                    "traffic_type": "ON_DEMAND"
+                  },
+                  "model_version": "gemini-3.1-flash-lite"
+                },
+                {
+                  "author": "homecare_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "call_221810",
+                          "name": "senior_risk_summary",
+                          "response": {
+                            "status": "not_found",
+                            "message": "No existe S999"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null,
+                        "media_processing": null,
+                        "speech_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  },
+                  "grounding_metadata": null,
+                  "usage_metadata": null,
+                  "model_version": null
+                },
+                {
+                  "author": "homecare_agent",
+                  "content": null,
+                  "grounding_metadata": null,
+                  "usage_metadata": {
+                    "cache_tokens_details": null,
+                    "cached_content_token_count": null,
+                    "candidates_token_count": 32,
+                    "candidates_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 32
+                      }
+                    ],
+                    "prompt_token_count": 752,
+                    "prompt_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 752
+                      }
+                    ],
+                    "thoughts_token_count": null,
+                    "tool_use_prompt_token_count": null,
+                    "tool_use_prompt_tokens_details": null,
+                    "total_token_count": 784,
+                    "traffic_type": "ON_DEMAND"
+                  },
+                  "model_version": "gemini-3.1-flash-lite"
+                }
+              ]
+            },
+            "creation_timestamp": 1793620599.1420968,
+            "duration": 3.848,
+            "model_duration": 1.68,
+            "tool_duration": 0.852,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "homecare_agent": {
+                  "name": "homecare_agent",
+                  "instructions": "\nEres un analista de atención domiciliaria. Respondes en español, con tono\nprofesional y conciso, a preguntas sobre personas mayores, cuidadores y\ntendencias, usando solo las herramientas disponibles sobre el mart de BigQuery.\n\nReglas:\n- No inventes cifras: todo número debe venir de una herramienta.\n- Los porcentajes de alerta, ánimo y seguimiento se calculan sobre visitas\n  con nota (solo las completadas), no sobre las programadas. Acláralo cuando\n  des estas métricas.\n- Los datos son sintéticos: si te preguntan por el origen, dilo.\n- Si una herramienta devuelve error, revisa las columnas con describe_table\n  y reintenta una vez; si sigue fallando, explica el problema.\n- Usa run_select solo si ninguna otra herramienta cubre la pregunta.\n- Presenta listas largas como tabla breve y cierra con una conclusión de una\n  frase.\n\n\nYou are an agent. Your internal name is \"homecare_agent\". The description about you is \"Responde en lenguaje natural sobre el mart de atención domiciliaria.\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "google_maps": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Personas mayores con más visitas que requieren seguimiento,\nordenadas por gravedad máxima y número de visitas de gravedad alta.\nLas cifras se calculan sobre visitas con nota, no sobre las programadas.\n\nArgs:\n    limit: número máximo de personas (1 a 50).",
+                          "name": "seniors_needing_followup",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "limit": {
+                                "default": 10,
+                                "title": "Limit",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "seniors_needing_followupParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Resumen de riesgo de una persona mayor concreta.\n\nArgs:\n    senior_id: identificador de la persona mayor.",
+                          "name": "senior_risk_summary",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "senior_id": {
+                                "title": "Senior Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "senior_id"
+                            ],
+                            "title": "senior_risk_summaryParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Cuidadores ordenados por tasa de cancelación (de mayor a menor).\n\nArgs:\n    limit: número máximo de cuidadores (1 a 50).",
+                          "name": "top_cancelling_caregivers",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "limit": {
+                                "default": 10,
+                                "title": "Limit",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "top_cancelling_caregiversParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Tendencia semanal de visitas, cancelaciones e incidencias.\nExcluye la última semana, que está incompleta.\n\nArgs:\n    weeks: número de semanas recientes a devolver (1 a 50).",
+                          "name": "weekly_trend",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "weeks": {
+                                "default": 12,
+                                "title": "Weeks",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "weekly_trendParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Devuelve las columnas y tipos de una tabla del mart.\n\nArgs:\n    table: nombre de la tabla (p. ej. 'senior_risk_enriched').",
+                          "name": "describe_table",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "table": {
+                                "title": "Table",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "table"
+                            ],
+                            "title": "describe_tableParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Consulta libre de solo lectura sobre tablas del mart, para preguntas\nque las demás herramientas no cubren. Debe ser un único SELECT sobre\ntablas de homecare_mart. Usa describe_table antes para conocer columnas.\n\nArgs:\n    sql: sentencia SELECT en GoogleSQL.",
+                          "name": "run_select",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "sql": {
+                                "title": "Sql",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "sql"
+                            ],
+                            "title": "run_selectParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        }
+                      ],
+                      "google_search_retrieval": null,
+                      "parallel_ai_search": null,
+                      "url_context": null,
+                      "mcp_servers": null,
+                      "exa_ai_search": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-persona_inexistente",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Dame el resumen de riesgo de S999",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": null,
+            "intermediate_data": null,
+            "creation_timestamp": 0.0,
+            "duration": null,
+            "model_duration": null,
+            "tool_duration": null,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "rubric_based_final_response_quality_v1",
+              "threshold": 1.0,
+              "criterion": {
+                "threshold": 1.0,
+                "include_intermediate_responses_in_final": false,
+                "judge_model_options": {
+                  "judge_model": "gemini-3.5-flash-lite",
+                  "num_samples": 3
+                },
+                "rubrics": [
+                  {
+                    "rubric_id": "limite_temporal",
+                    "type": "FINAL_RESPONSE_QUALITY",
+                    "rubric_content": {
+                      "text_property": "Si se pregunta por 'esta semana', indica que solo hay datos históricos y no inventa una semana; si no se pregunta, se cumple."
+                    }
+                  },
+                  {
+                    "rubric_id": "ausencia_datos",
+                    "type": "FINAL_RESPONSE_QUALITY",
+                    "rubric_content": {
+                      "text_property": "Si no hay datos para lo consultado, lo dice claramente y no inventa cifras; si hay datos, se cumple."
+                    }
+                  }
+                ]
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": [
+                  {
+                    "rubric_id": "limite_temporal",
+                    "rationale": "The user did not ask about 'esta semana', so the condition is satisfied.",
+                    "score": 1.0
+                  },
+                  {
+                    "rubric_id": "ausencia_datos",
+                    "rationale": "The tool response explicitly stated that S999 does not exist (\"No existe S999\"). The final answer clearly states that no record was found for senior identifier \"S999\" and does not invent any figures, which is fully consistent with the trusted evidence.",
+                    "score": 1.0
+                  }
+                ],
+                "token_usage_details": null,
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "tool_call_count_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "inference_call_count_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 2.0,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "token_usage_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1523.0,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": {
+                  "total_tokens": 1523.0,
+                  "input_tokens": 1468.0,
+                  "prompt_tokens": 1468.0,
+                  "cached_tokens": null,
+                  "tool_use_tokens": null,
+                  "output_tokens": 55.0,
+                  "candidates_tokens": 55.0,
+                  "reasoning_tokens": null
+                },
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "invocation_duration_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 3.848,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": {
+                  "total_seconds": 3.848,
+                  "model_seconds": 1.68,
+                  "tool_seconds": 0.852,
+                  "framework_seconds": 1.316
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "adk-eval-session-343c54d7-85a4-44ae-add8-8ec2e047a17c",
+      "session_details": {
+        "id": "adk-eval-session-343c54d7-85a4-44ae-add8-8ec2e047a17c",
+        "app_name": "homecare_agent",
+        "user_id": "user",
+        "state": {
+          "__llm_request_key__": "1ad9ec9f-8613-410d-a943-b59412d64ab0"
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Dame el resumen de riesgo de S999",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-baa06bd4-df96-4785-929d-b8de8ee374e8",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "9e1d0a80-85db-4e81-89f8-646c2afb0275",
+            "timestamp": 1793620598.156599
+          },
+          {
+            "model_version": "gemini-3.1-flash-lite",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "call_221810",
+                    "args": {
+                      "senior_id": "S999"
+                    },
+                    "name": "senior_risk_summary",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "AY89a18t1B4bF7lJMZ8AOdigLnLkA4yToep8DW2k243_t5KIsuFCLuFWM5Jl8Egb1qINOeUp7zfnhmwJ2-NrnJZJs2kqsv1j-qjLyBZF1YptxfJKp_GCpn9ikw==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "775e3686-ad3c-44bf-b602-8cd7d5c79fb5"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 23,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 23
+                }
+              ],
+              "prompt_token_count": 716,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 716
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 739,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-baa06bd4-df96-4785-929d-b8de8ee374e8",
+            "author": "homecare_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "775e3686-ad3c-44bf-b602-8cd7d5c79fb5"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "homecare_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "isolation_scope": null,
+            "id": "855a0f6c-c18b-4869-805a-2b90b7c9f93d",
+            "timestamp": 1793620598.328654
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "call_221810",
+                    "name": "senior_risk_summary",
+                    "response": {
+                      "status": "not_found",
+                      "message": "No existe S999"
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-baa06bd4-df96-4785-929d-b8de8ee374e8",
+            "author": "homecare_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "homecare_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "a450fc70-40ac-454e-b0fb-ab88ed909f2e",
+            "timestamp": 1793620601.1197793
+          },
+          {
+            "model_version": "gemini-3.1-flash-lite",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "No se encontró un registro de persona mayor con el identificador \"S999\". Por favor, verifique el ID e inténtelo de nuevo.",
+                  "thought": null,
+                  "thought_signature": "AY89a19zp29biSPsWZnuG5_FDae3DDPWqmir4ZxxzKdv8Ejm_S86d28BLKGMtkJ5d7SCZAnlLS4ejrO4SzHQEfsxBFvQyZbKnwPgAdrgyk6AkGNDIrYv_8iI4w==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "1ad9ec9f-8613-410d-a943-b59412d64ab0"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 32,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 32
+                }
+              ],
+              "prompt_token_count": 752,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 752
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 784,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-baa06bd4-df96-4785-929d-b8de8ee374e8",
+            "author": "homecare_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "1ad9ec9f-8613-410d-a943-b59412d64ab0"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "homecare_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "32d3028b-428b-4bb1-b8ba-73e58883ed37",
+            "timestamp": 1793620601.1315682
+          }
+        ],
+        "last_update_time": 1793620601.1315682
+      },
+      "user_id": "user"
+    },
+    {
+      "eval_set_file": "homecare_limits",
+      "eval_set_id": "homecare_limits",
+      "eval_id": "limite_temporal",
+      "final_eval_status": 2,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "rubric_based_final_response_quality_v1",
+          "threshold": 1.0,
+          "criterion": {
+            "threshold": 1.0,
+            "include_intermediate_responses_in_final": false,
+            "judge_model_options": {
+              "judge_model": "gemini-3.5-flash-lite",
+              "num_samples": 3
+            },
+            "rubrics": [
+              {
+                "rubric_id": "limite_temporal",
+                "type": "FINAL_RESPONSE_QUALITY",
+                "rubric_content": {
+                  "text_property": "Si se pregunta por 'esta semana', indica que solo hay datos históricos y no inventa una semana; si no se pregunta, se cumple."
+                }
+              },
+              {
+                "rubric_id": "ausencia_datos",
+                "type": "FINAL_RESPONSE_QUALITY",
+                "rubric_content": {
+                  "text_property": "Si no hay datos para lo consultado, lo dice claramente y no inventa cifras; si hay datos, se cumple."
+                }
+              }
+            ]
+          },
+          "custom_function_path": null,
+          "score": 0.5,
+          "eval_status": 2,
+          "details": {
+            "rubric_scores": [
+              {
+                "rubric_id": "limite_temporal",
+                "rationale": "This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.",
+                "score": 0.0
+              },
+              {
+                "rubric_id": "ausencia_datos",
+                "rationale": "This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.",
+                "score": 1.0
+              }
+            ],
+            "token_usage_details": null,
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "tool_call_count_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "inference_call_count_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 2.0,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "token_usage_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 3358.0,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": {
+              "total_tokens": 3358.0,
+              "input_tokens": 2892.0,
+              "prompt_tokens": 2892.0,
+              "cached_tokens": null,
+              "tool_use_tokens": null,
+              "output_tokens": 466.0,
+              "candidates_tokens": 466.0,
+              "reasoning_tokens": null
+            },
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "invocation_duration_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 4.734,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": {
+              "total_seconds": 4.734,
+              "model_seconds": 2.426,
+              "tool_seconds": 1.125,
+              "framework_seconds": 1.183
+            }
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-1e52b3dc-add5-4c98-834e-b9b292429772",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "¿Qué personas requieren seguimiento esta semana?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Las siguientes personas mayores presentan la mayor gravedad y cantidad de visitas con nota, requiriendo atención prioritaria. Nota: las tasas y estadísticas se calculan exclusivamente sobre las visitas con nota (completadas). Los datos presentados son sintéticos.\n\n| ID | Edad | Distrito | Visitas Grave | Visitas con Nota | Tasa Alerta |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| S0202 | 90 | Eixample | 14 | 121 | 23.1% |\n| S0293 | 91 | Horta-Guinardó | 13 | 112 | 26.8% |\n| S0194 | 91 | Gràcia | 13 | 89 | 27.0% |\n| S0050 | 82 | Eixample | 13 | 120 | 15.8% |\n| S0069 | 87 | Ciutat Vella | 11 | 104 | 21.2% |\n| S0224 | 75 | Eixample | 10 | 123 | 17.9% |\n| S0013 | 82 | Sants-Montjuïc | 10 | 117 | 18.8% |\n| S0061 | 72 | Gràcia | 10 | 69 | 29.0% |\n| S0161 | 76 | Les Corts | 10 | 118 | 16.1% |\n| S0257 | 85 | Eixample | 9 | 116 | 19.0% |\n\nEstas personas identificadas muestran una alta incidencia de riesgo cognitivo y de gravedad, por lo que se recomienda un seguimiento cercano esta semana.",
+                  "thought": null,
+                  "thought_signature": "AY89a1-FD0TFTbr7qr0FuAHuTBCtj-M4bwHgd5Bja32pQUuPm7whhdMTkQBh5OpicOy5gSiSg2V3jObS8ox3weoUtm4S_4qqYcZclRPDqXCWzZJ8G1SMcCtUCw==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "homecare_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "call_751989",
+                          "args": {
+                            "limit": 10
+                          },
+                          "name": "seniors_needing_followup",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "AY89a1_q0Olv7MdOMyKcdUjx8yKtSmZv65yUbkYIUcBN-CaSZWor551CPeGf9khE9rMJlruRDwPQJerOgxsUKc3D5muL_xngp0EtitnSwrfJOVbd91VLHUvpRg==",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null,
+                        "media_processing": null,
+                        "speech_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  },
+                  "grounding_metadata": null,
+                  "usage_metadata": {
+                    "cache_tokens_details": null,
+                    "cached_content_token_count": null,
+                    "candidates_token_count": 20,
+                    "candidates_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 20
+                      }
+                    ],
+                    "prompt_token_count": 714,
+                    "prompt_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 714
+                      }
+                    ],
+                    "thoughts_token_count": null,
+                    "tool_use_prompt_token_count": null,
+                    "tool_use_prompt_tokens_details": null,
+                    "total_token_count": 734,
+                    "traffic_type": "ON_DEMAND"
+                  },
+                  "model_version": "gemini-3.1-flash-lite"
+                },
+                {
+                  "author": "homecare_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "call_751989",
+                          "name": "seniors_needing_followup",
+                          "response": {
+                            "status": "ok",
+                            "rows": [
+                              {
+                                "senior_id": "S0202",
+                                "age": 90,
+                                "district": "Eixample",
+                                "lives_alone": true,
+                                "mobility_level": "low",
+                                "cognitive_risk": "high",
+                                "visits_per_week": 5,
+                                "preferred_shift": "morning",
+                                "scheduled_visits": 127,
+                                "completed_visits": 121,
+                                "missed_visits": 6,
+                                "incidents": 6,
+                                "high_severity_incidents": 1,
+                                "last_incident_date": "2026-09-10",
+                                "noted_visits": 121,
+                                "visits_with_alert": 28,
+                                "alert_rate": 0.23140495867768596,
+                                "low_mood_visits": 9,
+                                "followup_visits": 28,
+                                "high_severity_visits": 14,
+                                "max_severity_score": 3,
+                                "top_alert": "confusion"
+                              },
+                              {
+                                "senior_id": "S0293",
+                                "age": 91,
+                                "district": "Horta-Guinardó",
+                                "lives_alone": false,
+                                "mobility_level": "low",
+                                "cognitive_risk": "high",
+                                "visits_per_week": 5,
+                                "preferred_shift": "evening",
+                                "scheduled_visits": 128,
+                                "completed_visits": 112,
+                                "missed_visits": 16,
+                                "incidents": 8,
+                                "high_severity_incidents": 3,
+                                "last_incident_date": "2026-09-26",
+                                "noted_visits": 112,
+                                "visits_with_alert": 30,
+                                "alert_rate": 0.26785714285714285,
+                                "low_mood_visits": 6,
+                                "followup_visits": 30,
+                                "high_severity_visits": 13,
+                                "max_severity_score": 3,
+                                "top_alert": "confusion"
+                              },
+                              {
+                                "senior_id": "S0194",
+                                "age": 91,
+                                "district": "Gràcia",
+                                "lives_alone": true,
+                                "mobility_level": "high",
+                                "cognitive_risk": "high",
+                                "visits_per_week": 4,
+                                "preferred_shift": "evening",
+                                "scheduled_visits": 102,
+                                "completed_visits": 89,
+                                "missed_visits": 13,
+                                "incidents": 5,
+                                "high_severity_incidents": 2,
+                                "last_incident_date": "2026-08-29",
+                                "noted_visits": 89,
+                                "visits_with_alert": 24,
+                                "alert_rate": 0.2696629213483146,
+                                "low_mood_visits": 6,
+                                "followup_visits": 24,
+                                "high_severity_visits": 13,
+                                "max_severity_score": 3,
+                                "top_alert": "confusion"
+                              },
+                              {
+                                "senior_id": "S0050",
+                                "age": 82,
+                                "district": "Eixample",
+                                "lives_alone": false,
+                                "mobility_level": "low",
+                                "cognitive_risk": "low",
+                                "visits_per_week": 5,
+                                "preferred_shift": "morning",
+                                "scheduled_visits": 126,
+                                "completed_visits": 120,
+                                "missed_visits": 6,
+                                "incidents": 3,
+                                "high_severity_incidents": 0,
+                                "last_incident_date": "2026-08-06",
+                                "noted_visits": 120,
+                                "visits_with_alert": 19,
+                                "alert_rate": 0.15833333333333333,
+                                "low_mood_visits": 4,
+                                "followup_visits": 19,
+                                "high_severity_visits": 13,
+                                "max_severity_score": 3,
+                                "top_alert": "confusion"
+                              },
+                              {
+                                "senior_id": "S0069",
+                                "age": 87,
+                                "district": "Ciutat Vella",
+                                "lives_alone": false,
+                                "mobility_level": "medium",
+                                "cognitive_risk": "high",
+                                "visits_per_week": 5,
+                                "preferred_shift": "evening",
+                                "scheduled_visits": 127,
+                                "completed_visits": 104,
+                                "missed_visits": 23,
+                                "incidents": 5,
+                                "high_severity_incidents": 2,
+                                "last_incident_date": "2026-09-10",
+                                "noted_visits": 104,
+                                "visits_with_alert": 22,
+                                "alert_rate": 0.21153846153846154,
+                                "low_mood_visits": 7,
+                                "followup_visits": 22,
+                                "high_severity_visits": 11,
+                                "max_severity_score": 3,
+                                "top_alert": "confusion"
+                              },
+                              {
+                                "senior_id": "S0224",
+                                "age": 75,
+                                "district": "Eixample",
+                                "lives_alone": true,
+                                "mobility_level": "high",
+                                "cognitive_risk": "high",
+                                "visits_per_week": 5,
+                                "preferred_shift": "morning",
+                                "scheduled_visits": 127,
+                                "completed_visits": 123,
+                                "missed_visits": 4,
+                                "incidents": 5,
+                                "high_severity_incidents": 1,
+                                "last_incident_date": "2026-09-13",
+                                "noted_visits": 123,
+                                "visits_with_alert": 22,
+                                "alert_rate": 0.17886178861788618,
+                                "low_mood_visits": 5,
+                                "followup_visits": 22,
+                                "high_severity_visits": 10,
+                                "max_severity_score": 3,
+                                "top_alert": "confusion"
+                              },
+                              {
+                                "senior_id": "S0013",
+                                "age": 82,
+                                "district": "Sants-Montjuïc",
+                                "lives_alone": true,
+                                "mobility_level": "low",
+                                "cognitive_risk": "high",
+                                "visits_per_week": 5,
+                                "preferred_shift": "afternoon",
+                                "scheduled_visits": 126,
+                                "completed_visits": 117,
+                                "missed_visits": 9,
+                                "incidents": 5,
+                                "high_severity_incidents": 1,
+                                "last_incident_date": "2026-09-17",
+                                "noted_visits": 117,
+                                "visits_with_alert": 22,
+                                "alert_rate": 0.18803418803418803,
+                                "low_mood_visits": 6,
+                                "followup_visits": 22,
+                                "high_severity_visits": 10,
+                                "max_severity_score": 3,
+                                "top_alert": "confusion"
+                              },
+                              {
+                                "senior_id": "S0061",
+                                "age": 72,
+                                "district": "Gràcia",
+                                "lives_alone": true,
+                                "mobility_level": "low",
+                                "cognitive_risk": "high",
+                                "visits_per_week": 3,
+                                "preferred_shift": "afternoon",
+                                "scheduled_visits": 76,
+                                "completed_visits": 69,
+                                "missed_visits": 7,
+                                "incidents": 9,
+                                "high_severity_incidents": 4,
+                                "last_incident_date": "2026-08-29",
+                                "noted_visits": 69,
+                                "visits_with_alert": 20,
+                                "alert_rate": 0.2898550724637681,
+                                "low_mood_visits": 9,
+                                "followup_visits": 20,
+                                "high_severity_visits": 10,
+                                "max_severity_score": 3,
+                                "top_alert": "mala_alimentacion"
+                              },
+                              {
+                                "senior_id": "S0161",
+                                "age": 76,
+                                "district": "Les Corts",
+                                "lives_alone": false,
+                                "mobility_level": "medium",
+                                "cognitive_risk": "high",
+                                "visits_per_week": 5,
+                                "preferred_shift": "morning",
+                                "scheduled_visits": 128,
+                                "completed_visits": 118,
+                                "missed_visits": 10,
+                                "incidents": 2,
+                                "high_severity_incidents": 1,
+                                "last_incident_date": "2026-07-07",
+                                "noted_visits": 118,
+                                "visits_with_alert": 19,
+                                "alert_rate": 0.16101694915254236,
+                                "low_mood_visits": 6,
+                                "followup_visits": 19,
+                                "high_severity_visits": 10,
+                                "max_severity_score": 3,
+                                "top_alert": "confusion"
+                              },
+                              {
+                                "senior_id": "S0257",
+                                "age": 85,
+                                "district": "Eixample",
+                                "lives_alone": false,
+                                "mobility_level": "low",
+                                "cognitive_risk": "medium",
+                                "visits_per_week": 5,
+                                "preferred_shift": "afternoon",
+                                "scheduled_visits": 127,
+                                "completed_visits": 116,
+                                "missed_visits": 11,
+                                "incidents": 3,
+                                "high_severity_incidents": 1,
+                                "last_incident_date": "2026-09-29",
+                                "noted_visits": 116,
+                                "visits_with_alert": 22,
+                                "alert_rate": 0.1896551724137931,
+                                "low_mood_visits": 7,
+                                "followup_visits": 22,
+                                "high_severity_visits": 9,
+                                "max_severity_score": 3,
+                                "top_alert": "confusion"
+                              }
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null,
+                        "media_processing": null,
+                        "speech_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  },
+                  "grounding_metadata": null,
+                  "usage_metadata": null,
+                  "model_version": null
+                },
+                {
+                  "author": "homecare_agent",
+                  "content": null,
+                  "grounding_metadata": null,
+                  "usage_metadata": {
+                    "cache_tokens_details": null,
+                    "cached_content_token_count": null,
+                    "candidates_token_count": 446,
+                    "candidates_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 446
+                      }
+                    ],
+                    "prompt_token_count": 2178,
+                    "prompt_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 2178
+                      }
+                    ],
+                    "thoughts_token_count": null,
+                    "tool_use_prompt_token_count": null,
+                    "tool_use_prompt_tokens_details": null,
+                    "total_token_count": 2624,
+                    "traffic_type": "ON_DEMAND"
+                  },
+                  "model_version": "gemini-3.1-flash-lite"
+                }
+              ]
+            },
+            "creation_timestamp": 1793620599.1417778,
+            "duration": 4.734,
+            "model_duration": 2.426,
+            "tool_duration": 1.125,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "homecare_agent": {
+                  "name": "homecare_agent",
+                  "instructions": "\nEres un analista de atención domiciliaria. Respondes en español, con tono\nprofesional y conciso, a preguntas sobre personas mayores, cuidadores y\ntendencias, usando solo las herramientas disponibles sobre el mart de BigQuery.\n\nReglas:\n- No inventes cifras: todo número debe venir de una herramienta.\n- Los porcentajes de alerta, ánimo y seguimiento se calculan sobre visitas\n  con nota (solo las completadas), no sobre las programadas. Acláralo cuando\n  des estas métricas.\n- Los datos son sintéticos: si te preguntan por el origen, dilo.\n- Si una herramienta devuelve error, revisa las columnas con describe_table\n  y reintenta una vez; si sigue fallando, explica el problema.\n- Usa run_select solo si ninguna otra herramienta cubre la pregunta.\n- Presenta listas largas como tabla breve y cierra con una conclusión de una\n  frase.\n\n\nYou are an agent. Your internal name is \"homecare_agent\". The description about you is \"Responde en lenguaje natural sobre el mart de atención domiciliaria.\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "google_maps": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Personas mayores con más visitas que requieren seguimiento,\nordenadas por gravedad máxima y número de visitas de gravedad alta.\nLas cifras se calculan sobre visitas con nota, no sobre las programadas.\n\nArgs:\n    limit: número máximo de personas (1 a 50).",
+                          "name": "seniors_needing_followup",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "limit": {
+                                "default": 10,
+                                "title": "Limit",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "seniors_needing_followupParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Resumen de riesgo de una persona mayor concreta.\n\nArgs:\n    senior_id: identificador de la persona mayor.",
+                          "name": "senior_risk_summary",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "senior_id": {
+                                "title": "Senior Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "senior_id"
+                            ],
+                            "title": "senior_risk_summaryParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Cuidadores ordenados por tasa de cancelación (de mayor a menor).\n\nArgs:\n    limit: número máximo de cuidadores (1 a 50).",
+                          "name": "top_cancelling_caregivers",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "limit": {
+                                "default": 10,
+                                "title": "Limit",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "top_cancelling_caregiversParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Tendencia semanal de visitas, cancelaciones e incidencias.\nExcluye la última semana, que está incompleta.\n\nArgs:\n    weeks: número de semanas recientes a devolver (1 a 50).",
+                          "name": "weekly_trend",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "weeks": {
+                                "default": 12,
+                                "title": "Weeks",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "weekly_trendParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Devuelve las columnas y tipos de una tabla del mart.\n\nArgs:\n    table: nombre de la tabla (p. ej. 'senior_risk_enriched').",
+                          "name": "describe_table",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "table": {
+                                "title": "Table",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "table"
+                            ],
+                            "title": "describe_tableParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Consulta libre de solo lectura sobre tablas del mart, para preguntas\nque las demás herramientas no cubren. Debe ser un único SELECT sobre\ntablas de homecare_mart. Usa describe_table antes para conocer columnas.\n\nArgs:\n    sql: sentencia SELECT en GoogleSQL.",
+                          "name": "run_select",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "sql": {
+                                "title": "Sql",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "sql"
+                            ],
+                            "title": "run_selectParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        }
+                      ],
+                      "google_search_retrieval": null,
+                      "parallel_ai_search": null,
+                      "url_context": null,
+                      "mcp_servers": null,
+                      "exa_ai_search": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-limite_temporal",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "¿Qué personas requieren seguimiento esta semana?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": null,
+            "intermediate_data": null,
+            "creation_timestamp": 0.0,
+            "duration": null,
+            "model_duration": null,
+            "tool_duration": null,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "rubric_based_final_response_quality_v1",
+              "threshold": 1.0,
+              "criterion": {
+                "threshold": 1.0,
+                "include_intermediate_responses_in_final": false,
+                "judge_model_options": {
+                  "judge_model": "gemini-3.5-flash-lite",
+                  "num_samples": 3
+                },
+                "rubrics": [
+                  {
+                    "rubric_id": "limite_temporal",
+                    "type": "FINAL_RESPONSE_QUALITY",
+                    "rubric_content": {
+                      "text_property": "Si se pregunta por 'esta semana', indica que solo hay datos históricos y no inventa una semana; si no se pregunta, se cumple."
+                    }
+                  },
+                  {
+                    "rubric_id": "ausencia_datos",
+                    "type": "FINAL_RESPONSE_QUALITY",
+                    "rubric_content": {
+                      "text_property": "Si no hay datos para lo consultado, lo dice claramente y no inventa cifras; si hay datos, se cumple."
+                    }
+                  }
+                ]
+              },
+              "custom_function_path": null,
+              "score": 0.5,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": [
+                  {
+                    "rubric_id": "limite_temporal",
+                    "rationale": "The user asked about \"esta semana\", and the agent presented the top seniors needing followup without mentioning that the database only contains historical synthetic data and not a specific real-time current week. Therefore, the property is not fulfilled.",
+                    "score": 0.0
+                  },
+                  {
+                    "rubric_id": "ausencia_datos",
+                    "rationale": "Data was successfully retrieved from the tool (there were data for what was queried), so according to the second clause of the property (\"si hay datos, se cumple\"), the condition is met.",
+                    "score": 1.0
+                  }
+                ],
+                "token_usage_details": null,
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "tool_call_count_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "inference_call_count_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 2.0,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "token_usage_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 3358.0,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": {
+                  "total_tokens": 3358.0,
+                  "input_tokens": 2892.0,
+                  "prompt_tokens": 2892.0,
+                  "cached_tokens": null,
+                  "tool_use_tokens": null,
+                  "output_tokens": 466.0,
+                  "candidates_tokens": 466.0,
+                  "reasoning_tokens": null
+                },
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "invocation_duration_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 4.734,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": {
+                  "total_seconds": 4.734,
+                  "model_seconds": 2.426,
+                  "tool_seconds": 1.125,
+                  "framework_seconds": 1.183
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "adk-eval-session-f84c64fc-9be6-48dc-a808-6707ea63eac4",
+      "session_details": {
+        "id": "adk-eval-session-f84c64fc-9be6-48dc-a808-6707ea63eac4",
+        "app_name": "homecare_agent",
+        "user_id": "user",
+        "state": {
+          "__llm_request_key__": "0c6afd15-eb9c-4154-92f7-ebbc7c1ad2d3"
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "¿Qué personas requieren seguimiento esta semana?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-1e52b3dc-add5-4c98-834e-b9b292429772",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "b7892c5a-5446-41b1-9117-45276e632657",
+            "timestamp": 1793620598.1542058
+          },
+          {
+            "model_version": "gemini-3.1-flash-lite",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "call_751989",
+                    "args": {
+                      "limit": 10
+                    },
+                    "name": "seniors_needing_followup",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "AY89a1_q0Olv7MdOMyKcdUjx8yKtSmZv65yUbkYIUcBN-CaSZWor551CPeGf9khE9rMJlruRDwPQJerOgxsUKc3D5muL_xngp0EtitnSwrfJOVbd91VLHUvpRg==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "49a4277c-c825-473b-a221-2b40e4e4614c"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 20,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 20
+                }
+              ],
+              "prompt_token_count": 714,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 714
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 734,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-1e52b3dc-add5-4c98-834e-b9b292429772",
+            "author": "homecare_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "49a4277c-c825-473b-a221-2b40e4e4614c"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "homecare_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "isolation_scope": null,
+            "id": "ab3f55a2-deca-40be-a23d-74cb63cac1f8",
+            "timestamp": 1793620598.2252192
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "call_751989",
+                    "name": "seniors_needing_followup",
+                    "response": {
+                      "status": "ok",
+                      "rows": [
+                        {
+                          "senior_id": "S0202",
+                          "age": 90,
+                          "district": "Eixample",
+                          "lives_alone": true,
+                          "mobility_level": "low",
+                          "cognitive_risk": "high",
+                          "visits_per_week": 5,
+                          "preferred_shift": "morning",
+                          "scheduled_visits": 127,
+                          "completed_visits": 121,
+                          "missed_visits": 6,
+                          "incidents": 6,
+                          "high_severity_incidents": 1,
+                          "last_incident_date": "2026-09-10",
+                          "noted_visits": 121,
+                          "visits_with_alert": 28,
+                          "alert_rate": 0.23140495867768596,
+                          "low_mood_visits": 9,
+                          "followup_visits": 28,
+                          "high_severity_visits": 14,
+                          "max_severity_score": 3,
+                          "top_alert": "confusion"
+                        },
+                        {
+                          "senior_id": "S0293",
+                          "age": 91,
+                          "district": "Horta-Guinardó",
+                          "lives_alone": false,
+                          "mobility_level": "low",
+                          "cognitive_risk": "high",
+                          "visits_per_week": 5,
+                          "preferred_shift": "evening",
+                          "scheduled_visits": 128,
+                          "completed_visits": 112,
+                          "missed_visits": 16,
+                          "incidents": 8,
+                          "high_severity_incidents": 3,
+                          "last_incident_date": "2026-09-26",
+                          "noted_visits": 112,
+                          "visits_with_alert": 30,
+                          "alert_rate": 0.26785714285714285,
+                          "low_mood_visits": 6,
+                          "followup_visits": 30,
+                          "high_severity_visits": 13,
+                          "max_severity_score": 3,
+                          "top_alert": "confusion"
+                        },
+                        {
+                          "senior_id": "S0194",
+                          "age": 91,
+                          "district": "Gràcia",
+                          "lives_alone": true,
+                          "mobility_level": "high",
+                          "cognitive_risk": "high",
+                          "visits_per_week": 4,
+                          "preferred_shift": "evening",
+                          "scheduled_visits": 102,
+                          "completed_visits": 89,
+                          "missed_visits": 13,
+                          "incidents": 5,
+                          "high_severity_incidents": 2,
+                          "last_incident_date": "2026-08-29",
+                          "noted_visits": 89,
+                          "visits_with_alert": 24,
+                          "alert_rate": 0.2696629213483146,
+                          "low_mood_visits": 6,
+                          "followup_visits": 24,
+                          "high_severity_visits": 13,
+                          "max_severity_score": 3,
+                          "top_alert": "confusion"
+                        },
+                        {
+                          "senior_id": "S0050",
+                          "age": 82,
+                          "district": "Eixample",
+                          "lives_alone": false,
+                          "mobility_level": "low",
+                          "cognitive_risk": "low",
+                          "visits_per_week": 5,
+                          "preferred_shift": "morning",
+                          "scheduled_visits": 126,
+                          "completed_visits": 120,
+                          "missed_visits": 6,
+                          "incidents": 3,
+                          "high_severity_incidents": 0,
+                          "last_incident_date": "2026-08-06",
+                          "noted_visits": 120,
+                          "visits_with_alert": 19,
+                          "alert_rate": 0.15833333333333333,
+                          "low_mood_visits": 4,
+                          "followup_visits": 19,
+                          "high_severity_visits": 13,
+                          "max_severity_score": 3,
+                          "top_alert": "confusion"
+                        },
+                        {
+                          "senior_id": "S0069",
+                          "age": 87,
+                          "district": "Ciutat Vella",
+                          "lives_alone": false,
+                          "mobility_level": "medium",
+                          "cognitive_risk": "high",
+                          "visits_per_week": 5,
+                          "preferred_shift": "evening",
+                          "scheduled_visits": 127,
+                          "completed_visits": 104,
+                          "missed_visits": 23,
+                          "incidents": 5,
+                          "high_severity_incidents": 2,
+                          "last_incident_date": "2026-09-10",
+                          "noted_visits": 104,
+                          "visits_with_alert": 22,
+                          "alert_rate": 0.21153846153846154,
+                          "low_mood_visits": 7,
+                          "followup_visits": 22,
+                          "high_severity_visits": 11,
+                          "max_severity_score": 3,
+                          "top_alert": "confusion"
+                        },
+                        {
+                          "senior_id": "S0224",
+                          "age": 75,
+                          "district": "Eixample",
+                          "lives_alone": true,
+                          "mobility_level": "high",
+                          "cognitive_risk": "high",
+                          "visits_per_week": 5,
+                          "preferred_shift": "morning",
+                          "scheduled_visits": 127,
+                          "completed_visits": 123,
+                          "missed_visits": 4,
+                          "incidents": 5,
+                          "high_severity_incidents": 1,
+                          "last_incident_date": "2026-09-13",
+                          "noted_visits": 123,
+                          "visits_with_alert": 22,
+                          "alert_rate": 0.17886178861788618,
+                          "low_mood_visits": 5,
+                          "followup_visits": 22,
+                          "high_severity_visits": 10,
+                          "max_severity_score": 3,
+                          "top_alert": "confusion"
+                        },
+                        {
+                          "senior_id": "S0013",
+                          "age": 82,
+                          "district": "Sants-Montjuïc",
+                          "lives_alone": true,
+                          "mobility_level": "low",
+                          "cognitive_risk": "high",
+                          "visits_per_week": 5,
+                          "preferred_shift": "afternoon",
+                          "scheduled_visits": 126,
+                          "completed_visits": 117,
+                          "missed_visits": 9,
+                          "incidents": 5,
+                          "high_severity_incidents": 1,
+                          "last_incident_date": "2026-09-17",
+                          "noted_visits": 117,
+                          "visits_with_alert": 22,
+                          "alert_rate": 0.18803418803418803,
+                          "low_mood_visits": 6,
+                          "followup_visits": 22,
+                          "high_severity_visits": 10,
+                          "max_severity_score": 3,
+                          "top_alert": "confusion"
+                        },
+                        {
+                          "senior_id": "S0061",
+                          "age": 72,
+                          "district": "Gràcia",
+                          "lives_alone": true,
+                          "mobility_level": "low",
+                          "cognitive_risk": "high",
+                          "visits_per_week": 3,
+                          "preferred_shift": "afternoon",
+                          "scheduled_visits": 76,
+                          "completed_visits": 69,
+                          "missed_visits": 7,
+                          "incidents": 9,
+                          "high_severity_incidents": 4,
+                          "last_incident_date": "2026-08-29",
+                          "noted_visits": 69,
+                          "visits_with_alert": 20,
+                          "alert_rate": 0.2898550724637681,
+                          "low_mood_visits": 9,
+                          "followup_visits": 20,
+                          "high_severity_visits": 10,
+                          "max_severity_score": 3,
+                          "top_alert": "mala_alimentacion"
+                        },
+                        {
+                          "senior_id": "S0161",
+                          "age": 76,
+                          "district": "Les Corts",
+                          "lives_alone": false,
+                          "mobility_level": "medium",
+                          "cognitive_risk": "high",
+                          "visits_per_week": 5,
+                          "preferred_shift": "morning",
+                          "scheduled_visits": 128,
+                          "completed_visits": 118,
+                          "missed_visits": 10,
+                          "incidents": 2,
+                          "high_severity_incidents": 1,
+                          "last_incident_date": "2026-07-07",
+                          "noted_visits": 118,
+                          "visits_with_alert": 19,
+                          "alert_rate": 0.16101694915254236,
+                          "low_mood_visits": 6,
+                          "followup_visits": 19,
+                          "high_severity_visits": 10,
+                          "max_severity_score": 3,
+                          "top_alert": "confusion"
+                        },
+                        {
+                          "senior_id": "S0257",
+                          "age": 85,
+                          "district": "Eixample",
+                          "lives_alone": false,
+                          "mobility_level": "low",
+                          "cognitive_risk": "medium",
+                          "visits_per_week": 5,
+                          "preferred_shift": "afternoon",
+                          "scheduled_visits": 127,
+                          "completed_visits": 116,
+                          "missed_visits": 11,
+                          "incidents": 3,
+                          "high_severity_incidents": 1,
+                          "last_incident_date": "2026-09-29",
+                          "noted_visits": 116,
+                          "visits_with_alert": 22,
+                          "alert_rate": 0.1896551724137931,
+                          "low_mood_visits": 7,
+                          "followup_visits": 22,
+                          "high_severity_visits": 9,
+                          "max_severity_score": 3,
+                          "top_alert": "confusion"
+                        }
+                      ]
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-1e52b3dc-add5-4c98-834e-b9b292429772",
+            "author": "homecare_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "homecare_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "66aaa90d-b4d9-4886-aaf8-d17940226cbb",
+            "timestamp": 1793620600.2673793
+          },
+          {
+            "model_version": "gemini-3.1-flash-lite",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Las siguientes personas mayores presentan la mayor gravedad y cantidad de visitas con nota, requiriendo atención prioritaria. Nota: las tasas y estadísticas se calculan exclusivamente sobre las visitas con nota (completadas). Los datos presentados son sintéticos.\n\n| ID | Edad | Distrito | Visitas Grave | Visitas con Nota | Tasa Alerta |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| S0202 | 90 | Eixample | 14 | 121 | 23.1% |\n| S0293 | 91 | Horta-Guinardó | 13 | 112 | 26.8% |\n| S0194 | 91 | Gràcia | 13 | 89 | 27.0% |\n| S0050 | 82 | Eixample | 13 | 120 | 15.8% |\n| S0069 | 87 | Ciutat Vella | 11 | 104 | 21.2% |\n| S0224 | 75 | Eixample | 10 | 123 | 17.9% |\n| S0013 | 82 | Sants-Montjuïc | 10 | 117 | 18.8% |\n| S0061 | 72 | Gràcia | 10 | 69 | 29.0% |\n| S0161 | 76 | Les Corts | 10 | 118 | 16.1% |\n| S0257 | 85 | Eixample | 9 | 116 | 19.0% |\n\nEstas personas identificadas muestran una alta incidencia de riesgo cognitivo y de gravedad, por lo que se recomienda un seguimiento cercano esta semana.",
+                  "thought": null,
+                  "thought_signature": "AY89a1-FD0TFTbr7qr0FuAHuTBCtj-M4bwHgd5Bja32pQUuPm7whhdMTkQBh5OpicOy5gSiSg2V3jObS8ox3weoUtm4S_4qqYcZclRPDqXCWzZJ8G1SMcCtUCw==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "0c6afd15-eb9c-4154-92f7-ebbc7c1ad2d3"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 446,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 446
+                }
+              ],
+              "prompt_token_count": 2178,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 2178
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 2624,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-1e52b3dc-add5-4c98-834e-b9b292429772",
+            "author": "homecare_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "0c6afd15-eb9c-4154-92f7-ebbc7c1ad2d3"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "homecare_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "72190cbb-b4ec-4129-a8ab-c93e4bae3a22",
+            "timestamp": 1793620601.1242154
+          }
+        ],
+        "last_update_time": 1793620601.1242154
+      },
+      "user_id": "user"
+    }
+  ],
+  "creation_timestamp": 1793620608.554687
+}

@@ -1,0 +1,186 @@
+/home/javier_gonzalvez01/adk-homecare/.venv/lib/python3.12/site-packages/google/adk/evaluation/metric_evaluator_registry.py:285: UserWarning: [EXPERIMENTAL] MetricEvaluatorRegistry: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  return MetricEvaluatorRegistry()
+/home/javier_gonzalvez01/adk-homecare/.venv/lib/python3.12/site-packages/google/adk/cli/cli_tools_click.py:1546: UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  user_simulator_provider = UserSimulatorProvider(
+/home/javier_gonzalvez01/adk-homecare/.venv/lib/python3.12/site-packages/google/adk/cli/cli_tools_click.py:1553: UserWarning: [EXPERIMENTAL] LocalEvalService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  eval_service = LocalEvalService(
+/home/javier_gonzalvez01/adk-homecare/.venv/lib/python3.12/site-packages/google/adk/evaluation/simulation/user_simulator_provider.py:169: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  static_simulator = StaticUserSimulator(
+/home/javier_gonzalvez01/adk-homecare/.venv/lib/python3.12/site-packages/google/adk/evaluation/simulation/static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+2026-11-02 12:03:31,898 - INFO - plugin_manager.py:121 - Plugin 'request_intercepter_plugin' registered.
+2026-11-02 12:03:31,899 - INFO - plugin_manager.py:121 - Plugin 'ensure_retry_options' registered.
+2026-11-02 12:03:32,110 - INFO - plugin_manager.py:121 - Plugin 'request_intercepter_plugin' registered.
+2026-11-02 12:03:32,110 - INFO - plugin_manager.py:121 - Plugin 'ensure_retry_options' registered.
+2026-11-02 12:03:32,259 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 12:03:32,267 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 12:03:32,664 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 12:03:33,547 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 12:03:33,551 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 12:03:34,231 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 12:03:34,841 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 12:03:34,848 - INFO - runners.py:2334 - Closing runner...
+2026-11-02 12:03:34,849 - INFO - runners.py:2360 - Runner closed.
+2026-11-02 12:03:35,796 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 12:03:35,798 - INFO - runners.py:2334 - Closing runner...
+2026-11-02 12:03:35,798 - INFO - runners.py:2360 - Runner closed.
+/home/javier_gonzalvez01/adk-homecare/.venv/lib/python3.12/site-packages/google/adk/evaluation/metric_evaluator_registry.py:115: UserWarning: [EXPERIMENTAL] RubricBasedFinalResponseQualityV1Evaluator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  return evaluator_factory(eval_metric=eval_metric)
+/home/javier_gonzalvez01/adk-homecare/.venv/lib/python3.12/site-packages/google/adk/evaluation/rubric_based_final_response_quality_v1.py:271: UserWarning: [EXPERIMENTAL] RubricBasedEvaluator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+/home/javier_gonzalvez01/adk-homecare/.venv/lib/python3.12/site-packages/google/adk/evaluation/rubric_based_evaluator.py:363: UserWarning: [EXPERIMENTAL] LlmAsJudge: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+2026-11-02 12:03:35,864 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.5-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 12:03:35,933 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.5-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 12:03:37,319 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 12:03:37,320 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.5-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 12:03:37,404 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 12:03:37,405 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.5-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 12:03:38,811 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 12:03:38,812 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.5-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 12:03:38,842 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 12:03:38,843 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.5-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 12:03:40,250 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 12:03:40,336 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 12:03:40,338 - INFO - local_eval_set_results_manager.py:67 - Writing eval result to file: /home/javier_gonzalvez01/adk-homecare/homecare_agent/.adk/eval_history/homecare_agent_homecare_limits_1793621020.3385282.evalset_result.json
+Using evaluation criteria: criteria={'rubric_based_final_response_quality_v1': BaseCriterion(threshold=1.0, include_intermediate_responses_in_final=False, judge_model_options={'judge_model': 'gemini-3.5-flash-lite', 'num_samples': 3}, rubrics=[{'rubric_id': 'limite_temporal', 'type': 'FINAL_RESPONSE_QUALITY', 'rubric_content': {'text_property': "Si se pregunta por 'esta semana', indica que solo hay datos históricos y no inventa una semana; si no se pregunta, se cumple."}}, {'rubric_id': 'ausencia_datos', 'type': 'FINAL_RESPONSE_QUALITY', 'rubric_content': {'text_property': 'Si no hay datos para lo consultado, lo dice claramente y no inventa cifras; si hay datos, se cumple.'}}])} custom_metrics=None user_simulator_config=None live_model_config=None
+*********************************************************************
+Eval Run Summary
+homecare_limits:
+  Tests passed: 2
+  Tests failed: 0
+********************************************************************
+Eval Set Id: homecare_limits
+Eval Id: limite_temporal
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: rubric_based_final_response_quality_v1, Status: PASSED, Score: 1.0, Threshold: 1.0
+Rubric Scores:
+Rubric: limite_temporal, Score: 1.0, Reasoning: This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.
+Rubric: ausencia_datos, Score: 1.0, Reasoning: This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.
+---------------------------------------------------------------------
+Metric: tool_call_count_v1, Status: INFORMATIONAL, Score: 1.0, Threshold: None
+---------------------------------------------------------------------
+Metric: inference_call_count_v1, Status: INFORMATIONAL, Score: 2.0, Threshold: None
+---------------------------------------------------------------------
+Metric: token_usage_v1, Status: INFORMATIONAL, Score: 3409.0, Threshold: None
+Token breakdown:
+  total:            3409
+    input:          3060
+      prompt:       3060
+        cached:     n/a
+      tool use:     n/a
+    output:         349
+      candidates:   349
+      reasoning:    n/a
+---------------------------------------------------------------------
+Metric: invocation_duration_v1, Status: INFORMATIONAL, Score: 3.897, Threshold: None
+Duration breakdown:
+  total:            3.897s
+    model:          2.936s
+    tool:           0.673s
+    framework:      0.288s
+---------------------------------------------------------------------
+Invocation Details:
+
+Invocation 1 of 1
+  prompt:                     ¿Qué personas requieren seguimiento esta semana?
+  expected_response:          (none)
+  actual_response:            Los datos disponibles corresponden al histórico completo y no a una semana
+                              específica. A continuación se presentan las personas mayores con mayor necesidad
+                              de seguimiento, calculada según la gravedad y frecuencia de las visitas (basado
+                              únicamente en visitas con nota):
+                              
+                              | ID Senior | Edad | Distrito | Riesgo Cognitivo | Visitas Alta Gravedad |
+                              | :--- | :--- | :--- | :--- | :--- |
+                              | S0202 | 90 | Eixample | High | 14 |
+                              | S0293 | 91 | Horta-Guinardó | High | 13 |
+                              | S0194 | 91 | Gràcia | High | 13 |
+                              | S0050 | 82 | Eixample | Low | 13 |
+                              | S0069 | 87 | Ciutat Vella | High | 11 |
+                              | S0224 | 75 | Eixample | High | 10 |
+                              | S0013 | 82 | Sants-Montjuïc | High | 10 |
+                              | S0061 | 72 | Gràcia | High | 10 |
+                              | S0161 | 76 | Les Corts | High | 10 |
+                              | S0257 | 85 | Eixample | Medium | 9 |
+                              
+                              Estos casos destacan por un elevado número de visitas de alta gravedad
+                              registradas históricamente.
+  expected_tool_calls:        (none)
+  actual_tool_calls:          seniors_needing_followup(
+                                limit=10)
+  rubric_based_final_response_quality_v1: PASSED (1.0)
+  rubric:                     limite_temporal
+                              Score: 1.0, Reasoning: The user asked about "esta semana". The agent correctly
+                              started its final answer by stating: "Los datos disponibles corresponden al
+                              histórico completo y no a una semana específica", thus complying with the
+                              developer rule ("Los datos no tienen fecha por visita. Si preguntan por 'esta
+                              semana', 'hoy' o un periodo concreto, empieza diciendo que solo puedes responder
+                              sobre el histórico completo y presenta la lista como tal").
+  rubric:                     ausencia_datos
+                              Score: 1.0, Reasoning: There were data available from the tool response, and the
+                              agent accurately populated the table with the returned figures without inventing
+                              any data. Thus, the condition for when data *is* available is fulfilled.
+  tool_call_count_v1:         1
+  inference_call_count_v1:    2
+  token_usage_v1:             3409 (in 3060, out 349)
+  invocation_duration_v1:     3.90s (model 2.936s, tool 0.673s, framework 0.288s)
+
+
+********************************************************************
+Eval Set Id: homecare_limits
+Eval Id: persona_inexistente
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: rubric_based_final_response_quality_v1, Status: PASSED, Score: 1.0, Threshold: 1.0
+Rubric Scores:
+Rubric: limite_temporal, Score: 1.0, Reasoning: This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.
+Rubric: ausencia_datos, Score: 1.0, Reasoning: This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.
+---------------------------------------------------------------------
+Metric: tool_call_count_v1, Status: INFORMATIONAL, Score: 1.0, Threshold: None
+---------------------------------------------------------------------
+Metric: inference_call_count_v1, Status: INFORMATIONAL, Score: 2.0, Threshold: None
+---------------------------------------------------------------------
+Metric: token_usage_v1, Status: INFORMATIONAL, Score: 1692.0, Threshold: None
+Token breakdown:
+  total:            1692
+    input:          1636
+      prompt:       1636
+        cached:     n/a
+      tool use:     n/a
+    output:         56
+      candidates:   56
+      reasoning:    n/a
+---------------------------------------------------------------------
+Metric: invocation_duration_v1, Status: INFORMATIONAL, Score: 2.736, Threshold: None
+Duration breakdown:
+  total:            2.736s
+    model:          1.688s
+    tool:           0.88s
+    framework:      0.168s
+---------------------------------------------------------------------
+Invocation Details:
+
+Invocation 1 of 1
+  prompt:                     Dame el resumen de riesgo de S999
+  expected_response:          (none)
+  actual_response:            El identificador S999 no existe en la base de datos. Por favor, verifique el ID
+                              de la persona mayor e inténtelo de nuevo.
+  expected_tool_calls:        (none)
+  actual_tool_calls:          senior_risk_summary(
+                                senior_id='S999')
+  rubric_based_final_response_quality_v1: PASSED (1.0)
+  rubric:                     limite_temporal
+                              Score: 1.0, Reasoning: Since the prompt does not ask for "esta semana" or any
+                              specific time period, the condition for this property is met automatically ("si
+                              no se pregunta, se cumple").
+  rubric:                     ausencia_datos
+                              Score: 1.0, Reasoning: The agent correctly stated clearly that the identifier
+                              S999 does not exist in the database and did not invent any figures, which
+                              directly fulfills the condition when no data exists.
+  tool_call_count_v1:         1
+  inference_call_count_v1:    2
+  token_usage_v1:             1692 (in 1636, out 56)
+  invocation_duration_v1:     2.74s (model 1.688s, tool 0.88s, framework 0.168s)
+
+

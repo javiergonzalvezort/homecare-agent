@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "rubric_based_final_response_quality_v1": {
+      "threshold": 1.0,
+      "judge_model_options": {
+        "judge_model": "gemini-3.5-flash-lite",
+        "num_samples": 3
+      },
+      "rubrics": [
+        {
+          "rubric_id": "limite_temporal",
+          "type": "FINAL_RESPONSE_QUALITY",
+          "rubric_content": {
+            "text_property": "Si se pregunta por 'esta semana', indica que solo hay datos históricos y no inventa una semana; si no se pregunta, se cumple."
+          }
+        },
+        {
+          "rubric_id": "ausencia_datos",
+          "type": "FINAL_RESPONSE_QUALITY",
+          "rubric_content": {
+            "text_property": "Si no hay datos para lo consultado, lo dice claramente y no inventa cifras; si hay datos, se cumple."
+          }
+        }
+      ]
+    }
+  }
+}

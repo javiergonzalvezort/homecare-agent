@@ -1,0 +1,182 @@
+nohup: ignoring input
+2026-11-02 10:46:50,247 - WARNING - fast_api.py:225 - ADK server is binding to a non-loopback address (0.0.0.0) and has no authentication: any client that can reach it can read, modify, and delete any user's sessions and artifacts. Do not expose it to untrusted networks without an authenticating proxy.
+2026-11-02 10:46:50,249 - INFO - service_factory.py:333 - Using in-memory memory service
+2026-11-02 10:46:50,256 - INFO - local_storage.py:89 - Using per-agent session storage rooted at /home/javier_gonzalvez01/adk-homecare
+2026-11-02 10:46:50,256 - INFO - local_storage.py:121 - Using per-agent artifact storage rooted at /home/javier_gonzalvez01/adk-homecare
+/home/javier_gonzalvez01/adk-homecare/.venv/lib/python3.12/site-packages/google/adk/cli/fast_api.py:320: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  credential_service = InMemoryCredentialService()
+/home/javier_gonzalvez01/adk-homecare/.venv/lib/python3.12/site-packages/google/adk/auth/credential_service/in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__()
+INFO:     Started server process [2948]
+INFO:     Waiting for application startup.
+
++-----------------------------------------------------------------------------+
+| ADK Web Server started                                                      |
+|                                                                             |
+| For local testing, access at http://0.0.0.0:8080.                         |
++-----------------------------------------------------------------------------+
+
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+2026-11-02 10:47:04,554 - INFO - local_eval_sets_manager.py:220 - Creating eval set file `/home/javier_gonzalvez01/adk-homecare/homecare_agent/homecare_basic.evalset.json`
+2026-11-02 10:47:04,554 - INFO - local_eval_sets_manager.py:224 - Eval set file doesn't exist, we will create a new one.
+INFO:     127.0.0.1:38188 - "POST /dev/apps/homecare_agent/eval-sets HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /?authuser=0 HTTP/1.1" 307 Temporary Redirect
+INFO:     83.41.127.96:0 - "GET /dev-ui/ HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev-ui/assets/config/runtime-config.json HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /list-apps?relative_path=./ HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev-ui/prism-dark.css HTTP/1.1" 404 Not Found
+INFO:     83.41.127.96:0 - "GET /version HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/builder?ts=1793616576735 HTTP/1.1" 403 Forbidden
+2026-11-02 10:49:36,768 - INFO - envs.py:83 - Loaded .env file for homecare_agent at /home/javier_gonzalvez01/adk-homecare/homecare_agent/.env
+2026-11-02 10:49:36,983 - INFO - agent_loader.py:190 - Found root_agent in homecare_agent.agent
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/build_graph_image?dark_mode=false HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/build_graph_image?dark_mode=true HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/build_graph HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/eval_sets HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/eval_results HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev-ui/prism-dark.css HTTP/1.1" 404 Not Found
+2026-11-02 10:50:19,872 - INFO - local_storage.py:65 - Creating local session service at /home/javier_gonzalvez01/adk-homecare/homecare_agent/.adk/session.db
+2026-11-02 10:50:19,884 - INFO - api_server.py:1283 - New session created: 02ffe5c8-4f43-4489-88e0-d090055b396a
+INFO:     83.41.127.96:0 - "POST /apps/homecare_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "POST /run_sse HTTP/1.1" 200 OK
+2026-11-02 10:50:20,184 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 10:50:21,145 - INFO - _client.py:1740 - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/qidas-513417/locations/global/publishers/google/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-11-02 10:50:21,171 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 10:50:21,693 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 10:50:22,290 - INFO - _client.py:1740 - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/qidas-513417/locations/global/publishers/google/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-11-02 10:50:22,291 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 10:50:22,321 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 10:50:23,078 - INFO - _client.py:1740 - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/qidas-513417/locations/global/publishers/google/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-11-02 10:50:23,079 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 10:50:23,277 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 10:50:23,984 - INFO - _client.py:1740 - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/qidas-513417/locations/global/publishers/google/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-11-02 10:50:23,985 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 10:50:24,814 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 10:50:25,569 - INFO - _client.py:1740 - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/qidas-513417/locations/global/publishers/google/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-11-02 10:50:25,571 - INFO - google_llm.py:372 - Response received from the model.
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/debug/trace/session/02ffe5c8-4f43-4489-88e0-d090055b396a HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "POST /run_sse HTTP/1.1" 200 OK
+2026-11-02 10:50:39,789 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 10:50:40,436 - INFO - _client.py:1740 - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/qidas-513417/locations/global/publishers/google/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-11-02 10:50:40,438 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 10:50:41,168 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 10:50:41,756 - INFO - _client.py:1740 - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/qidas-513417/locations/global/publishers/google/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-11-02 10:50:41,757 - INFO - google_llm.py:372 - Response received from the model.
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/debug/trace/session/02ffe5c8-4f43-4489-88e0-d090055b396a HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/eval_sets/homecare_basic/evals HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+2026-11-02 10:59:00,785 - INFO - api_server.py:1283 - New session created: d846338d-50d6-426b-afe8-a08c0bb97a03
+INFO:     83.41.127.96:0 - "POST /apps/homecare_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "POST /run_sse HTTP/1.1" 200 OK
+2026-11-02 10:59:00,887 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 10:59:01,704 - INFO - _client.py:1740 - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/qidas-513417/locations/global/publishers/google/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-11-02 10:59:01,706 - INFO - google_llm.py:372 - Response received from the model.
+2026-11-02 10:59:02,430 - INFO - google_llm.py:263 - Sending out request, model: gemini-3.1-flash-lite, backend: GoogleLLMVariant.VERTEX_AI, stream: False
+2026-11-02 10:59:03,492 - INFO - _client.py:1740 - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/qidas-513417/locations/global/publishers/google/models/gemini-3.1-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-11-02 10:59:03,494 - INFO - google_llm.py:372 - Response received from the model.
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/debug/trace/session/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /apps/homecare_agent/users/user/sessions/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "POST /dev/apps/homecare_agent/eval_sets/homecare_basic/add_session HTTP/1.1" 403 Forbidden
+INFO:     83.41.127.96:0 - "GET /apps/homecare_agent/users/user/sessions/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "POST /dev/apps/homecare_agent/eval_sets/homecare_basic/add_session HTTP/1.1" 403 Forbidden
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55388 - "POST /dev/apps/homecare_agent/eval_sets/homecare_basic/add_session HTTP/1.1" 422 Unprocessable Entity
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /apps/homecare_agent/users/user/sessions/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "POST /dev/apps/homecare_agent/eval_sets/homecare_basic/add_session HTTP/1.1" 403 Forbidden
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /apps/homecare_agent/users/user/sessions/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "POST /dev/apps/homecare_agent/eval_sets/homecare_basic/add_session HTTP/1.1" 403 Forbidden
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /apps/homecare_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /apps/homecare_agent/users/user/sessions/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/debug/trace/session/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/debug/trace/session/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /apps/homecare_agent/users/user/sessions/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "POST /dev/apps/homecare_agent/eval_sets/homecare_basic/add_session HTTP/1.1" 403 Forbidden
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53600 - "GET /dev/apps/homecare_agent/eval_sets/homecare_basic HTTP/1.1" 405 Method Not Allowed
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /apps/homecare_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49020 - "POST /dev/apps/homecare_agent/eval_sets/homecare_basic/add_session HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev-ui/?app=homecare_agent&userId=user&session=d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-IDCXNWW3.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-NLTM4DEO.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-JBDBESHO.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-C7C63WJA.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-PRKFGJVH.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-OQGNECBI.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-XCIW2OUI.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-SBIPGDQI.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/polyfills-5CFQRCPP.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-63Y33MON.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-ZSPVMZGT.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/main-KCUV4MHY.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/styles-4R3GDHUZ.css HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-GG3CUCE3.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-XFUII6LE.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-ORABBJZL.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-TLHHCYOY.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-JHJZJ2D5.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-YUSHYV7C.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-ROUF34MA.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-BZGM3F3K.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/chunk-BTIP5KPZ.js HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/assets/config/runtime-config.json HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev-ui/adk_favicon.svg HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev-ui/prism-dark.css HTTP/1.1" 404 Not Found
+INFO:     83.41.127.96:0 - "GET /list-apps?relative_path=./ HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /version HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev-ui/assets/ADK-512-color.svg HTTP/1.1" 304 Not Modified
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/build_graph_image?dark_mode=false HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/build_graph_image?dark_mode=true HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/build_graph HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/builder?ts=1793620827977 HTTP/1.1" 403 Forbidden
+INFO:     83.41.127.96:0 - "GET /apps/homecare_agent/users/user/sessions/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/eval_sets HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/eval_results HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/debug/trace/session/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/eval_results/homecare_agent_homecare_limits_1793620608.554687 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/eval_results/homecare_agent_homecare_basic_1793618862.0726194 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /dev/apps/homecare_agent/debug/trace/session/d846338d-50d6-426b-afe8-a08c0bb97a03 HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK
+INFO:     83.41.127.96:0 - "GET /config/telemetry HTTP/1.1" 200 OK

@@ -1,0 +1,46 @@
+{
+  "eval_set_id": "homecare_limits",
+  "name": "homecare_limits",
+  "eval_cases": [
+    {
+      "eval_id": "limite_temporal",
+      "session_input": {
+        "app_name": "homecare_agent",
+        "user_id": "user"
+      },
+      "conversation": [
+        {
+          "invocation_id": "e-limite_temporal",
+          "user_content": {
+            "role": "user",
+            "parts": [
+              {
+                "text": "¿Qué personas requieren seguimiento esta semana?"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "eval_id": "persona_inexistente",
+      "session_input": {
+        "app_name": "homecare_agent",
+        "user_id": "user"
+      },
+      "conversation": [
+        {
+          "invocation_id": "e-persona_inexistente",
+          "user_content": {
+            "role": "user",
+            "parts": [
+              {
+                "text": "Dame el resumen de riesgo de S999"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

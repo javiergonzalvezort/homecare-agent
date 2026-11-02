@@ -1,0 +1,132 @@
+{
+  "eval_set_id": "homecare_basic",
+  "name": "homecare_basic",
+  "eval_cases": [
+    {
+      "eval_id": "cuidador_que_mas_cancela",
+      "conversation": [
+        {
+          "invocation_id": "e-cbdfb161-5907-4215-b9d9-531f2e55bd0c",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Qué cuidador cancela más"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "El cuidador con mayor tasa de cancelación es C035, con un 16,4 %. Los datos son sintéticos."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "homecare_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_50904",
+                        "args": {
+                          "limit": 1
+                        },
+                        "name": "top_cancelling_caregivers"
+                      },
+                      "thought_signature": "AY89a189hkFUzEXX-1jVgDri93V_spY3zhsHH8xgGWfburg1MRxp8QLipXOVskcB9RFdiD_II89ZGftBKQyO5rHbvEcTjMlINeM4WTG-YuUHSYzjeKmjvGtjdQ=="
+                    }
+                  ],
+                  "role": "model"
+                },
+                "usage_metadata": {
+                  "candidates_token_count": 18,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 18
+                    }
+                  ],
+                  "prompt_token_count": 712,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 712
+                    }
+                  ],
+                  "total_token_count": 730,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.1-flash-lite"
+              },
+              {
+                "author": "homecare_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_50904",
+                        "name": "top_cancelling_caregivers",
+                        "response": {
+                          "status": "ok",
+                          "rows": [
+                            {
+                              "caregiver_id": "C035",
+                              "contract_type": "full_time",
+                              "tenure_months": 8,
+                              "tenure_band": "under_12m",
+                              "scheduled_visits": 683,
+                              "completed_visits": 571,
+                              "missed_visits": 112,
+                              "cancel_rate": 0.164,
+                              "avg_delay_min": 11.8,
+                              "late_rate": 0.305,
+                              "incidents_on_visit_days": 5
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "homecare_agent",
+                "usage_metadata": {
+                  "candidates_token_count": 79,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 79
+                    }
+                  ],
+                  "prompt_token_count": 820,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 820
+                    }
+                  ],
+                  "total_token_count": 899,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.1-flash-lite"
+              }
+            ]
+          },
+          "creation_timestamp": 1793617140.875531
+        }
+      ],
+      "session_input": {
+        "app_name": "homecare_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1793618691.5090091
+    }
+  ],
+  "creation_timestamp": 1793616424.5544188
+}

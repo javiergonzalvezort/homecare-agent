@@ -1,0 +1,1207 @@
+{
+  "eval_set_result_id": "homecare_agent_homecare_basic_1793618862.0726194",
+  "eval_set_result_name": "homecare_agent_homecare_basic_1793618862.0726194",
+  "eval_set_id": "homecare_basic",
+  "eval_case_results": [
+    {
+      "eval_set_file": "homecare_basic",
+      "eval_set_id": "homecare_basic",
+      "eval_id": "cuidador_que_mas_cancela",
+      "final_eval_status": 2,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 1.0,
+          "criterion": {
+            "threshold": 1.0,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.8,
+          "criterion": {
+            "threshold": 0.8,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 0.6611570247933884,
+          "eval_status": 2,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "tool_call_count_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "inference_call_count_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 2.0,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "token_usage_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 1652.0,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": {
+              "total_tokens": 1652.0,
+              "input_tokens": 1532.0,
+              "prompt_tokens": 1532.0,
+              "cached_tokens": null,
+              "tool_use_tokens": null,
+              "output_tokens": 120.0,
+              "candidates_tokens": 120.0,
+              "reasoning_tokens": null
+            },
+            "duration_details": null
+          }
+        },
+        {
+          "metric_name": "invocation_duration_v1",
+          "threshold": null,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 3.394,
+          "eval_status": 4,
+          "details": {
+            "rubric_scores": null,
+            "token_usage_details": null,
+            "duration_details": {
+              "total_seconds": 3.394,
+              "model_seconds": 2.329,
+              "tool_seconds": 0.745,
+              "framework_seconds": 0.32
+            }
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-9d51f48b-17b0-422c-981b-947b1878a53a",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Qué cuidador cancela más",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "El cuidador con la tasa de cancelación más alta es el identificado como **C035**.\n\nPresenta una tasa de cancelación del **16,4%**, con 112 visitas canceladas sobre un total de 683 visitas programadas.\n\n*Nota: Estos datos provienen de una base de datos sintética.*\n\n**Conclusión:** El cuidador C035 requiere una revisión de su desempeño, dado que registra la tasa de cancelación más elevada del sistema.",
+                  "thought": null,
+                  "thought_signature": "AY89a1_PwRHV8o1Mem-NpyQGmVP9AU_Lr-WmQkVNE8mOZPWNoxLNRODTKmQiuDAcolC5saH84IxfeYWofEXB56vK1x7jQEkXoh59z-g4H7q4mJE4YC-uRp1FmA==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "homecare_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "call_680592",
+                          "args": {
+                            "limit": 1
+                          },
+                          "name": "top_cancelling_caregivers",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "AY89a1_Y4VZ3SToEVW1xMNGQCDAwjvVFE2aVZKWYe_7OwKHu5tj3GFqELSz_k2nb6MZlYMmlnWfIm7_WT-D_NPq5UVS_N35Nz4_0kaM91P7VDw4Cs9Z3l6kGrQ==",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null,
+                        "media_processing": null,
+                        "speech_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  },
+                  "grounding_metadata": null,
+                  "usage_metadata": {
+                    "cache_tokens_details": null,
+                    "cached_content_token_count": null,
+                    "candidates_token_count": 18,
+                    "candidates_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 18
+                      }
+                    ],
+                    "prompt_token_count": 712,
+                    "prompt_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 712
+                      }
+                    ],
+                    "thoughts_token_count": null,
+                    "tool_use_prompt_token_count": null,
+                    "tool_use_prompt_tokens_details": null,
+                    "total_token_count": 730,
+                    "traffic_type": "ON_DEMAND"
+                  },
+                  "model_version": "gemini-3.1-flash-lite"
+                },
+                {
+                  "author": "homecare_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "call_680592",
+                          "name": "top_cancelling_caregivers",
+                          "response": {
+                            "status": "ok",
+                            "rows": [
+                              {
+                                "caregiver_id": "C035",
+                                "contract_type": "full_time",
+                                "tenure_months": 8,
+                                "tenure_band": "under_12m",
+                                "scheduled_visits": 683,
+                                "completed_visits": 571,
+                                "missed_visits": 112,
+                                "cancel_rate": 0.164,
+                                "avg_delay_min": 11.8,
+                                "late_rate": 0.305,
+                                "incidents_on_visit_days": 5
+                              }
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null,
+                        "media_processing": null,
+                        "speech_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  },
+                  "grounding_metadata": null,
+                  "usage_metadata": null,
+                  "model_version": null
+                },
+                {
+                  "author": "homecare_agent",
+                  "content": null,
+                  "grounding_metadata": null,
+                  "usage_metadata": {
+                    "cache_tokens_details": null,
+                    "cached_content_token_count": null,
+                    "candidates_token_count": 102,
+                    "candidates_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 102
+                      }
+                    ],
+                    "prompt_token_count": 820,
+                    "prompt_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 820
+                      }
+                    ],
+                    "thoughts_token_count": null,
+                    "tool_use_prompt_token_count": null,
+                    "tool_use_prompt_tokens_details": null,
+                    "total_token_count": 922,
+                    "traffic_type": "ON_DEMAND"
+                  },
+                  "model_version": "gemini-3.1-flash-lite"
+                }
+              ]
+            },
+            "creation_timestamp": 1793618859.922532,
+            "duration": 3.394,
+            "model_duration": 2.329,
+            "tool_duration": 0.745,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "homecare_agent": {
+                  "name": "homecare_agent",
+                  "instructions": "\nEres un analista de atención domiciliaria. Respondes en español, con tono\nprofesional y conciso, a preguntas sobre personas mayores, cuidadores y\ntendencias, usando solo las herramientas disponibles sobre el mart de BigQuery.\n\nReglas:\n- No inventes cifras: todo número debe venir de una herramienta.\n- Los porcentajes de alerta, ánimo y seguimiento se calculan sobre visitas\n  con nota (solo las completadas), no sobre las programadas. Acláralo cuando\n  des estas métricas.\n- Los datos son sintéticos: si te preguntan por el origen, dilo.\n- Si una herramienta devuelve error, revisa las columnas con describe_table\n  y reintenta una vez; si sigue fallando, explica el problema.\n- Usa run_select solo si ninguna otra herramienta cubre la pregunta.\n- Presenta listas largas como tabla breve y cierra con una conclusión de una\n  frase.\n\n\nYou are an agent. Your internal name is \"homecare_agent\". The description about you is \"Responde en lenguaje natural sobre el mart de atención domiciliaria.\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "google_maps": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Personas mayores con más visitas que requieren seguimiento,\nordenadas por gravedad máxima y número de visitas de gravedad alta.\nLas cifras se calculan sobre visitas con nota, no sobre las programadas.\n\nArgs:\n    limit: número máximo de personas (1 a 50).",
+                          "name": "seniors_needing_followup",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "limit": {
+                                "default": 10,
+                                "title": "Limit",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "seniors_needing_followupParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Resumen de riesgo de una persona mayor concreta.\n\nArgs:\n    senior_id: identificador de la persona mayor.",
+                          "name": "senior_risk_summary",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "senior_id": {
+                                "title": "Senior Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "senior_id"
+                            ],
+                            "title": "senior_risk_summaryParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Cuidadores ordenados por tasa de cancelación (de mayor a menor).\n\nArgs:\n    limit: número máximo de cuidadores (1 a 50).",
+                          "name": "top_cancelling_caregivers",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "limit": {
+                                "default": 10,
+                                "title": "Limit",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "top_cancelling_caregiversParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Tendencia semanal de visitas, cancelaciones e incidencias.\nExcluye la última semana, que está incompleta.\n\nArgs:\n    weeks: número de semanas recientes a devolver (1 a 50).",
+                          "name": "weekly_trend",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "weeks": {
+                                "default": 12,
+                                "title": "Weeks",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "weekly_trendParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Devuelve las columnas y tipos de una tabla del mart.\n\nArgs:\n    table: nombre de la tabla (p. ej. 'senior_risk_enriched').",
+                          "name": "describe_table",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "table": {
+                                "title": "Table",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "table"
+                            ],
+                            "title": "describe_tableParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Consulta libre de solo lectura sobre tablas del mart, para preguntas\nque las demás herramientas no cubren. Debe ser un único SELECT sobre\ntablas de homecare_mart. Usa describe_table antes para conocer columnas.\n\nArgs:\n    sql: sentencia SELECT en GoogleSQL.",
+                          "name": "run_select",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "sql": {
+                                "title": "Sql",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "sql"
+                            ],
+                            "title": "run_selectParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        }
+                      ],
+                      "google_search_retrieval": null,
+                      "parallel_ai_search": null,
+                      "url_context": null,
+                      "mcp_servers": null,
+                      "exa_ai_search": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-cbdfb161-5907-4215-b9d9-531f2e55bd0c",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Qué cuidador cancela más",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "El cuidador con la mayor tasa de cancelación es el identificado con el código **C035**, con una tasa del 16,4 %.\n\n*Nota: Estos datos provienen de un conjunto de datos sintético para fines de análisis.*\n\nEste cuidador presenta una tasa de cancelación significativamente alta, lo cual podría requerir una revisión de su desempeño o carga de trabajo.",
+                  "thought": null,
+                  "thought_signature": "AY89a1_ZRs7Tje0j718M5xo5jzgsLfhZtWpxj2UqP61hSTadzzU6m0zr0uwlSZO10qeRTiLTbI9ZsGEq6M8bAOHNuvpfUZZBy_K9rmx1zRW0WM8rQo3Sj6Be4Q==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "homecare_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "call_50904",
+                          "args": {
+                            "limit": 1
+                          },
+                          "name": "top_cancelling_caregivers",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "AY89a189hkFUzEXX-1jVgDri93V_spY3zhsHH8xgGWfburg1MRxp8QLipXOVskcB9RFdiD_II89ZGftBKQyO5rHbvEcTjMlINeM4WTG-YuUHSYzjeKmjvGtjdQ==",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null,
+                        "media_processing": null,
+                        "speech_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  },
+                  "grounding_metadata": null,
+                  "usage_metadata": {
+                    "cache_tokens_details": null,
+                    "cached_content_token_count": null,
+                    "candidates_token_count": 18,
+                    "candidates_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 18
+                      }
+                    ],
+                    "prompt_token_count": 712,
+                    "prompt_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 712
+                      }
+                    ],
+                    "thoughts_token_count": null,
+                    "tool_use_prompt_token_count": null,
+                    "tool_use_prompt_tokens_details": null,
+                    "total_token_count": 730,
+                    "traffic_type": "ON_DEMAND"
+                  },
+                  "model_version": "gemini-3.1-flash-lite"
+                },
+                {
+                  "author": "homecare_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "call_50904",
+                          "name": "top_cancelling_caregivers",
+                          "response": {
+                            "status": "ok",
+                            "rows": [
+                              {
+                                "caregiver_id": "C035",
+                                "contract_type": "full_time",
+                                "tenure_months": 8,
+                                "tenure_band": "under_12m",
+                                "scheduled_visits": 683,
+                                "completed_visits": 571,
+                                "missed_visits": 112,
+                                "cancel_rate": 0.164,
+                                "avg_delay_min": 11.8,
+                                "late_rate": 0.305,
+                                "incidents_on_visit_days": 5
+                              }
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null,
+                        "audio_transcription": null,
+                        "media_processing": null,
+                        "speech_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  },
+                  "grounding_metadata": null,
+                  "usage_metadata": null,
+                  "model_version": null
+                },
+                {
+                  "author": "homecare_agent",
+                  "content": null,
+                  "grounding_metadata": null,
+                  "usage_metadata": {
+                    "cache_tokens_details": null,
+                    "cached_content_token_count": null,
+                    "candidates_token_count": 79,
+                    "candidates_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 79
+                      }
+                    ],
+                    "prompt_token_count": 820,
+                    "prompt_tokens_details": [
+                      {
+                        "modality": "TEXT",
+                        "token_count": 820
+                      }
+                    ],
+                    "thoughts_token_count": null,
+                    "tool_use_prompt_token_count": null,
+                    "tool_use_prompt_tokens_details": null,
+                    "total_token_count": 899,
+                    "traffic_type": "ON_DEMAND"
+                  },
+                  "model_version": "gemini-3.1-flash-lite"
+                }
+              ]
+            },
+            "creation_timestamp": 1793617140.875531,
+            "duration": null,
+            "model_duration": null,
+            "tool_duration": null,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 1.0,
+              "criterion": {
+                "threshold": 1.0,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.8,
+              "criterion": {
+                "threshold": 0.8,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 0.6611570247933884,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "tool_call_count_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "inference_call_count_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 2.0,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "token_usage_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1652.0,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": {
+                  "total_tokens": 1652.0,
+                  "input_tokens": 1532.0,
+                  "prompt_tokens": 1532.0,
+                  "cached_tokens": null,
+                  "tool_use_tokens": null,
+                  "output_tokens": 120.0,
+                  "candidates_tokens": 120.0,
+                  "reasoning_tokens": null
+                },
+                "duration_details": null
+              }
+            },
+            {
+              "metric_name": "invocation_duration_v1",
+              "threshold": null,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 3.394,
+              "eval_status": 4,
+              "details": {
+                "rubric_scores": null,
+                "token_usage_details": null,
+                "duration_details": {
+                  "total_seconds": 3.394,
+                  "model_seconds": 2.329,
+                  "tool_seconds": 0.745,
+                  "framework_seconds": 0.32
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "adk-eval-session-5bac88c7-7c65-42e1-9d1c-352374a99e25",
+      "session_details": {
+        "id": "adk-eval-session-5bac88c7-7c65-42e1-9d1c-352374a99e25",
+        "app_name": "homecare_agent",
+        "user_id": "user",
+        "state": {
+          "__llm_request_key__": "63e118af-5943-4ff4-b42a-fb525c2d0b04"
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Qué cuidador cancela más",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-9d51f48b-17b0-422c-981b-947b1878a53a",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "8a1dcb05-fb2b-4872-a935-fd4199fc46bc",
+            "timestamp": 1793618858.9111972
+          },
+          {
+            "model_version": "gemini-3.1-flash-lite",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "call_680592",
+                    "args": {
+                      "limit": 1
+                    },
+                    "name": "top_cancelling_caregivers",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "AY89a1_Y4VZ3SToEVW1xMNGQCDAwjvVFE2aVZKWYe_7OwKHu5tj3GFqELSz_k2nb6MZlYMmlnWfIm7_WT-D_NPq5UVS_N35Nz4_0kaM91P7VDw4Cs9Z3l6kGrQ==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "2425727b-ab8d-43fd-aca5-fb760ba9e43e"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 18,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 18
+                }
+              ],
+              "prompt_token_count": 712,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 712
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 730,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-9d51f48b-17b0-422c-981b-947b1878a53a",
+            "author": "homecare_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "2425727b-ab8d-43fd-aca5-fb760ba9e43e"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "homecare_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "isolation_scope": null,
+            "id": "b83856de-492e-4980-8d2a-600d7f6178d8",
+            "timestamp": 1793618858.9744112
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "call_680592",
+                    "name": "top_cancelling_caregivers",
+                    "response": {
+                      "status": "ok",
+                      "rows": [
+                        {
+                          "caregiver_id": "C035",
+                          "contract_type": "full_time",
+                          "tenure_months": 8,
+                          "tenure_band": "under_12m",
+                          "scheduled_visits": 683,
+                          "completed_visits": 571,
+                          "missed_visits": 112,
+                          "cancel_rate": 0.164,
+                          "avg_delay_min": 11.8,
+                          "late_rate": 0.305,
+                          "incidents_on_visit_days": 5
+                        }
+                      ]
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-9d51f48b-17b0-422c-981b-947b1878a53a",
+            "author": "homecare_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "homecare_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "53df156b-1e3e-4539-90f3-6b847aa11e02",
+            "timestamp": 1793618860.6677785
+          },
+          {
+            "model_version": "gemini-3.1-flash-lite",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "El cuidador con la tasa de cancelación más alta es el identificado como **C035**.\n\nPresenta una tasa de cancelación del **16,4%**, con 112 visitas canceladas sobre un total de 683 visitas programadas.\n\n*Nota: Estos datos provienen de una base de datos sintética.*\n\n**Conclusión:** El cuidador C035 requiere una revisión de su desempeño, dado que registra la tasa de cancelación más elevada del sistema.",
+                  "thought": null,
+                  "thought_signature": "AY89a1_PwRHV8o1Mem-NpyQGmVP9AU_Lr-WmQkVNE8mOZPWNoxLNRODTKmQiuDAcolC5saH84IxfeYWofEXB56vK1x7jQEkXoh59z-g4H7q4mJE4YC-uRp1FmA==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null,
+                  "audio_transcription": null,
+                  "media_processing": null,
+                  "speech_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "turn_complete_reason": null,
+            "interaction_status": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "63e118af-5943-4ff4-b42a-fb525c2d0b04"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 102,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 102
+                }
+              ],
+              "prompt_token_count": 820,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 820
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 922,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "voice_activity": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "environment_id": null,
+            "invocation_id": "e-9d51f48b-17b0-422c-981b-947b1878a53a",
+            "author": "homecare_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "63e118af-5943-4ff4-b42a-fb525c2d0b04"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "transfer_reason": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "homecare_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "e4a8307b-ca28-4bfa-9a2c-c78f99f054d3",
+            "timestamp": 1793618860.6703756
+          }
+        ],
+        "last_update_time": 1793618860.6703756
+      },
+      "user_id": "user"
+    }
+  ],
+  "creation_timestamp": 1793618862.0726194
+}
