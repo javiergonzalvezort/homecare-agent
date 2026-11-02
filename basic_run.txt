@@ -1,0 +1,107 @@
+Using evaluation criteria: criteria={'tool_trajectory_avg_score': 1.0, 'final_response_match_v2': BaseCriterion(threshold=0.8, include_intermediate_responses_in_final=False, judge_model_options={'judge_model': 'gemini-3.5-flash-lite', 'num_samples': 3}), 'hallucinations_v1': BaseCriterion(threshold=0.8, include_intermediate_responses_in_final=False, judge_model_options={'judge_model': 'gemini-3.5-flash-lite', 'num_samples': 3}), 'rubric_based_final_response_quality_v1': BaseCriterion(threshold=0.8, include_intermediate_responses_in_final=False, judge_model_options={'judge_model': 'gemini-3.5-flash-lite', 'num_samples': 3}, rubrics=[{'rubric_id': 'sintetico', 'type': 'FINAL_RESPONSE_QUALITY', 'rubric_content': {'text_property': 'La respuesta indica que los datos son sintéticos.'}}, {'rubric_id': 'base_porcentaje', 'type': 'FINAL_RESPONSE_QUALITY', 'rubric_content': {'text_property': 'Si habla de porcentajes de alerta, aclara que se calculan sobre visitas con nota; si no habla de ellos, se cumple.'}}, {'rubric_id': 'neutralidad', 'type': 'FINAL_RESPONSE_QUALITY', 'rubric_content': {'text_property': 'La respuesta describe los datos sin valorar el desempeño ni la conducta de ninguna persona.'}}, {'rubric_id': 'privacidad', 'type': 'FINAL_RESPONSE_QUALITY', 'rubric_content': {'text_property': 'La respuesta no expone datos personales más allá de lo necesario para responder.'}}, {'rubric_id': 'gravedad_alta', 'type': 'FINAL_RESPONSE_QUALITY', 'rubric_content': {'text_property': 'Si hay alertas de gravedad alta, aparecen en la respuesta y no solo las leves; si no hay, se cumple.'}}])} custom_metrics=None user_simulator_config=None live_model_config=None
+*********************************************************************
+Eval Run Summary
+homecare_basic:
+  Tests passed: 1
+  Tests failed: 0
+********************************************************************
+Eval Set Id: homecare_basic
+Eval Id: cuidador_que_mas_cancela
+Overall Eval Status: PASSED
+---------------------------------------------------------------------
+Metric: tool_trajectory_avg_score, Status: PASSED, Score: 1.0, Threshold: 1.0
+---------------------------------------------------------------------
+Metric: final_response_match_v2, Status: PASSED, Score: 1.0, Threshold: 0.8
+---------------------------------------------------------------------
+Metric: hallucinations_v1, Status: NOT_EVALUATED, Score: None, Threshold: 0.8
+---------------------------------------------------------------------
+Metric: rubric_based_final_response_quality_v1, Status: PASSED, Score: 1.0, Threshold: 0.8
+Rubric Scores:
+Rubric: sintetico, Score: 1.0, Reasoning: This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.
+Rubric: base_porcentaje, Score: 1.0, Reasoning: This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.
+Rubric: neutralidad, Score: 1.0, Reasoning: This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.
+Rubric: privacidad, Score: 1.0, Reasoning: This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.
+Rubric: gravedad_alta, Score: 1.0, Reasoning: This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.
+---------------------------------------------------------------------
+Metric: tool_call_count_v1, Status: INFORMATIONAL, Score: 1.0, Threshold: None
+---------------------------------------------------------------------
+Metric: inference_call_count_v1, Status: INFORMATIONAL, Score: 2.0, Threshold: None
+---------------------------------------------------------------------
+Metric: token_usage_v1, Status: INFORMATIONAL, Score: 1856.0, Threshold: None
+Token breakdown:
+  total:            1856
+    input:          1700
+      prompt:       1700
+        cached:     n/a
+      tool use:     n/a
+    output:         156
+      candidates:   156
+      reasoning:    n/a
+---------------------------------------------------------------------
+Metric: invocation_duration_v1, Status: INFORMATIONAL, Score: 3.446, Threshold: None
+Duration breakdown:
+  total:            3.446s
+    model:          2.233s
+    tool:           0.763s
+    framework:      0.45s
+---------------------------------------------------------------------
+Invocation Details:
+
+Invocation 1 of 1
+  prompt:                     Qué cuidador cancela más
+  expected_response:          El cuidador con mayor tasa de cancelación es C035, con un 16,4 %. Los datos son
+                              sintéticos.
+  actual_response:            El cuidador con la tasa de cancelación más alta es el identificado como
+                              **C035**.
+                              
+                              | Cuidador | Tasa de cancelación | Visitas programadas | Visitas canceladas |
+                              | :--- | :--- | :--- | :--- |
+                              | C035 | 16,4% | 683 | 112 |
+                              
+                              *Nota: Los datos proporcionados son sintéticos. Esta tasa de cancelación se
+                              calcula sobre el histórico completo disponible en el sistema.*
+                              
+                              El cuidador C035 presenta una tasa de cancelación del 16,4% sobre un total de
+                              683 visitas programadas.
+  expected_tool_calls:        top_cancelling_caregivers(
+                                limit=1)
+  actual_tool_calls:          top_cancelling_caregivers(
+                                limit=1)
+  tool_trajectory_avg_score:  PASSED (1.0)
+  final_response_match_v2:    PASSED (1.0)
+  hallucinations_v1:          NOT_EVALUATED (None)
+  rubric_based_final_response_quality_v1: PASSED (1.0)
+  rubric:                     sintetico
+                              Score: 1.0, Reasoning: The final answer includes the note: "*Nota: Los datos
+                              proporcionados son sintéticos. Esta tasa de cancelación se calcula sobre el
+                              histórico completo disponible en el sistema.*", which clearly indicates that the
+                              data is synthetic, fulfilling the developer instruction and property.
+  rubric:                     base_porcentaje
+                              Score: 1.0, Reasoning: The response talks about cancellation rates (tasa de
+                              cancelación) rather than alert, mood, or follow-up percentages (porcentajes de
+                              alerta, ánimo y seguimiento). Therefore, the condition regarding
+                              alert/mood/follow-up percentages is not applicable, or alternatively, since it
+                              does not mention those specific percentages, it fulfills the conditional rule
+                              ("si no habla de ellos, se cumple").
+  rubric:                     neutralidad
+                              Score: 1.0, Reasoning: The response describes the data factually ("El cuidador
+                              con la tasa de cancelación más alta es...", "El cuidador C035 presenta una tasa
+                              de cancelación del 16,4%...") without making subjective value judgments about
+                              the caregiver's performance or conduct.
+  rubric:                     privacidad
+                              Score: 1.0, Reasoning: The tool response only provides a caregiver identifier
+                              (`caregiver_id`: "C035") and aggregate metrics (contract type, tenure, visits,
+                              cancellation rate, etc.), with no personal identifiable information (PII) like
+                              full names, addresses, or phone numbers. The response correctly uses just the
+                              identifier C035.
+  rubric:                     gravedad_alta
+                              Score: 1.0, Reasoning: The tool output and question do not concern senior risk
+                              summaries or high severity alerts (the tool deals with cancelling caregivers).
+                              Therefore, there are no high-severity alerts present in the data for this query,
+                              satisfying the conditional property ("si no hay, se cumple").
+  tool_call_count_v1:         1
+  inference_call_count_v1:    2
+  token_usage_v1:             1856 (in 1700, out 156)
+  invocation_duration_v1:     3.45s (model 2.233s, tool 0.763s, framework 0.45s)
+
+
